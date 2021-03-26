@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -11,7 +13,7 @@
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="1091.0" BorderPane.alignment="CENTER">
             <children>
-                <ButtonBar prefHeight="57.0" prefWidth="388.0">
+                <ButtonBar prefHeight="57.0" prefWidth="760.0">
                     <buttons>
                         <Button id="btnLoad" fx:id="btnLoad" mnemonicParsing="false" onAction="#handleBtnLoadAction" prefHeight="27.0" prefWidth="141.0" text="Load images...">
                             <opaqueInsets>
@@ -24,6 +26,8 @@
                             </opaqueInsets>
                         </Button>
                         <Button id="btnNext" fx:id="btnNext" mnemonicParsing="false" onAction="#handleBtnNextAction" text="Next" />
+                  <Button id="btnNext" fx:id="btnStartStop" mnemonicParsing="false" onAction="#handleStartStopSlideshow" text="Start Slide" />
+                  <Slider fx:id="slideShowTimer" majorTickUnit="1000.0" max="5000.0" min="1000.0" prefHeight="14.0" showTickLabels="true" showTickMarks="true" />
                     </buttons>
                 </ButtonBar>
             </children>
@@ -37,6 +41,9 @@
             <center>
                 <ImageView fx:id="imageView" fitHeight="647.0" fitWidth="1090.0" pickOnBounds="true" preserveRatio="true" />
             </center>
+         <top>
+            <Label fx:id="pathToImage" text="PATH_TO_PICTURE" BorderPane.alignment="CENTER" />
+         </top>
         </BorderPane>
     </center>
 </BorderPane>
